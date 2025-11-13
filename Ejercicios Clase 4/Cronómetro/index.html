@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cronómetro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #cronómetro {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    #cronómetro.alerta {
+      animation: parpadeo 0.5s ease-in-out;
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { color: white; }
+      50% { color: #ff4444; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Cronómetro</h1>
+  <div id="cronómetro">00:00:00</div>
+  <div>
+    <button id="iniciar">Iniciar</button>
+    <button id="pausar">Pausar</button>
+    <button id="reiniciar">Reiniciar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
